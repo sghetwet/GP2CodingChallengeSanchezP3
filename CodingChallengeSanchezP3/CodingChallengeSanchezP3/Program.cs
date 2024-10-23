@@ -16,6 +16,7 @@ class Challenges
             Console.WriteLine("5: Converting age (in years) to days old");
             Console.WriteLine("6: Finding the area of a triangle");
             Console.WriteLine("7: Finding out if a number is less than 0");
+            Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -98,12 +99,25 @@ class Challenges
 
                 Console.WriteLine(lessthanorequaltozero(number10int));
             }
+
+            else if (choiceint == 8)
+            {
+                Console.WriteLine("Let's see if the sum of two numbers is less than 100, give me a number!");
+                var one = Console.ReadLine();
+                int oneint = int.Parse(one);
+
+                Console.WriteLine("Now give me a number to add to your first number.");
+                var two = Console.ReadLine();
+                int twoint = int.Parse(two);
+
+                Console.WriteLine(lessthanhundred(oneint, twoint));
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
             }
         }
-    }
+   }
 
     public static int Sum(int number1, int number2)
     {
@@ -137,6 +151,15 @@ class Challenges
     public static bool lessthanorequaltozero(int number10)
     {
         if (number10 <= 0)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public static bool lessthanhundred(int one, int two)
+    {
+        if (one + two < 100)
         {
             return true;
         }
