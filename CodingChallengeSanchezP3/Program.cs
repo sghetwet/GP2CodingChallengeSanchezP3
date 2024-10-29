@@ -1,6 +1,7 @@
 ﻿using System;
 
 
+
 class Challenges
 {
     public static void Main(string[] args)
@@ -17,6 +18,7 @@ class Challenges
             Console.WriteLine("6: Finding the area of a triangle");
             Console.WriteLine("7: Finding out if a number is less than 0");
             Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
+            Console.WriteLine("9: Seeing it to numbers are equal to eachother");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -112,12 +114,25 @@ class Challenges
 
                 Console.WriteLine(lessthanhundred(oneint, twoint));
             }
+
+            else if (choiceint == 9)
+            {
+                Console.WriteLine("Let's see if two numbers are equal to one another, give me a number to use.");
+                var Mario = Console.ReadLine();
+                int Marioint = int.Parse(Mario);
+
+                Console.WriteLine("Now give me another number to compare it to.");
+                var Luigi = Console.ReadLine();
+                int Luigiint = int.Parse(Luigi);
+
+                Console.WriteLine(equal(Marioint, Luigiint));
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
             }
         }
-   }
+    }
 
     public static int Sum(int number1, int number2)
     {
@@ -164,5 +179,17 @@ class Challenges
             return true;
         }
         return false;
+    }
+
+    public static bool equal(int Mario, int Luigi)
+    {
+        if (Mario == Luigi)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }    
     }
 }
