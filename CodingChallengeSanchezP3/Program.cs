@@ -125,7 +125,8 @@ class Challenges
                 var Luigi = Console.ReadLine();
                 int Luigiint = int.Parse(Luigi);
 
-                Console.WriteLine(equal(Marioint, Luigiint));
+                Console.WriteLine("Are your numbers are equal? Survey says: " + equal(Marioint, Luigiint));
+                equal(Marioint, Luigiint);
             }
             else
             {
