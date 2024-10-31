@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 
 
 
@@ -19,6 +20,7 @@ class Challenges
             Console.WriteLine("7: Finding out if a number is less than 0");
             Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
             Console.WriteLine("9: Seeing it to numbers are equal to eachother");
+            Console.WriteLine("10: adding something to a sentence");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -128,6 +130,13 @@ class Challenges
                 Console.WriteLine("Are your numbers are equal? Survey says: " + equal(Marioint, Luigiint));
                 equal(Marioint, Luigiint);
             }
+            else if (choiceint == 10)
+            {
+                Console.WriteLine("I will add something to the sentence you give me, so give me a sentence");
+                var words = Console.ReadLine();
+                Console.WriteLine("Something " + words + ".");
+
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -191,6 +200,12 @@ class Challenges
         else
         {
             return false;
-        }    
+        }
+    }
+    public static void Gimmie()
+    {
+        Console.WriteLine("I will add something to the sentence you give me, so give me a sentence");
+        var words = Console.ReadLine();
+        Console.WriteLine("Something " + words + ".");
     }
 }
