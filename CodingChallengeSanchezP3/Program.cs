@@ -20,7 +20,8 @@ class Challenges
             Console.WriteLine("7: Finding out if a number is less than 0");
             Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
             Console.WriteLine("9: Seeing it to numbers are equal to eachother");
-            Console.WriteLine("10: adding something to a sentence");
+            Console.WriteLine("10: adding something to " +
+                "+a sentence");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
