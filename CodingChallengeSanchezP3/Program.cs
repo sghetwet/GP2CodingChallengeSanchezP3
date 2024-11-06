@@ -140,8 +140,16 @@ class Challenges
             }
             else if (choiceint == 11)
             {
-                Console.WriteLine("I will give you the 100% real and legit answer to a true or false question.");
-
+                Console.WriteLine("I will give you the 100% real and legit answer to a true or false question. \n Type true or false");
+                var trueorfalse = Console.ReadLine();
+                if (trueorfalse == "true")
+                {
+                    Console.WriteLine(" false ");
+                }
+                else if (trueorfalse == "false")
+                {
+                    Console.WriteLine(" true ");
+                }
             }
             else
             {
