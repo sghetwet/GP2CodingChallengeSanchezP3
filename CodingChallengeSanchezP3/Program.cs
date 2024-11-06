@@ -20,8 +20,8 @@ class Challenges
             Console.WriteLine("7: Finding out if a number is less than 0");
             Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
             Console.WriteLine("9: Seeing it to numbers are equal to eachother");
-            Console.WriteLine("10: adding something to " +
-                "+a sentence");
+            Console.WriteLine("10: adding something to a sentence");
+            Console.WriteLine("11: Determining if it is a true or false statement.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -138,10 +138,16 @@ class Challenges
                 Console.WriteLine("Something " + words + ".");
 
             }
+            else if (choiceint == 11)
+            {
+                Console.WriteLine("I will give you the 100% real and legit answer to a true or false question.");
+
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
             }
+
         }
     }
 
