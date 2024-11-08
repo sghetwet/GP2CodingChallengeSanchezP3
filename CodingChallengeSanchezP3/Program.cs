@@ -12,16 +12,17 @@ class Challenges
         {
             Console.WriteLine("Welcome to my coding challenge program. There will be a variety of different functions you will have to choose from. Please pick one of these numbers:");
             Console.WriteLine("1: Adding Numbers");
-            Console.WriteLine("2: Converting Minutes to seconds");
-            Console.WriteLine("3: Adding 1 to any given number");
-            Console.WriteLine("4: Calculating Circut Power");
-            Console.WriteLine("5: Converting age (in years) to days old");
-            Console.WriteLine("6: Finding the area of a triangle");
-            Console.WriteLine("7: Finding out if a number is less than 0");
-            Console.WriteLine("8: Seeing if the sum of two numbers is less than 100");
-            Console.WriteLine("9: Seeing it to numbers are equal to eachother");
-            Console.WriteLine("10: adding something to a sentence");
+            Console.WriteLine("2: Converting Minutes to seconds.");
+            Console.WriteLine("3: Adding 1 to any given number.");
+            Console.WriteLine("4: Calculating Circut Power.");
+            Console.WriteLine("5: Converting age (in years) to days old.");
+            Console.WriteLine("6: Finding the area of a triangle.");
+            Console.WriteLine("7: Finding out if a number is less than 0.");
+            Console.WriteLine("8: Seeing if the sum of two numbers is less than 100.");
+            Console.WriteLine("9: Seeing it two numbers are equal to eachother.");
+            Console.WriteLine("10: adding something to a sentence.");
             Console.WriteLine("11: Determining if it is a true or false statement.");
+            Console.WriteLine("12: Converting Hours to seconds.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -151,6 +152,14 @@ class Challenges
                     Console.WriteLine(" true ");
                 }
             }
+            else if (choiceint == 12)
+            {
+                Console.WriteLine("Thou shall give me a number for hours that I will convert to seconds.");
+                    var thosewhoknow = Console.ReadLine();
+                int thosewhoknowint = int.Parse(thosewhoknow);
+
+                Console.WriteLine(thosewhoknow + " hours converted to seconds is: " + WinterArc(thosewhoknowint) + " seconds");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -222,5 +231,10 @@ class Challenges
         Console.WriteLine("I will add something to the sentence you give me, so give me a sentence");
         var words = Console.ReadLine();
         Console.WriteLine("Something " + words + ".");
+    }
+
+    public static int WinterArc(int thosewhoknow)
+    {
+        return thosewhoknow * 3600;
     }
 }
