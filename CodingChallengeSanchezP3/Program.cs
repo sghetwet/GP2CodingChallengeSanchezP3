@@ -23,6 +23,7 @@ class Challenges
             Console.WriteLine("10: adding something to a sentence.");
             Console.WriteLine("11: Determining if it is a true or false statement.");
             Console.WriteLine("12: Converting Hours to seconds.");
+            Console.WriteLine("13 Returning the sum of internal angles of a polygon.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -160,6 +161,13 @@ class Challenges
 
                 Console.WriteLine(thosewhoknow + " hours converted to seconds is: " + WinterArc(thosewhoknowint) + " seconds");
             }
+            else if (choiceint == 13)
+            {
+                Console.WriteLine("Give me a polygon with any sides greater than 1 and I will return the sum of it's internal angles.");
+                var egg = Console.ReadLine();
+                int eggint = int.Parse(egg);
+                    Console.WriteLine("Your polygons internal angles equals: " + Angler(eggint) + " degrees.");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -236,5 +244,17 @@ class Challenges
     public static int WinterArc(int thosewhoknow)
     {
         return thosewhoknow * 3600;
+    }
+    public static int Angler(int egg)
+    {
+        if (egg < 2)
+        {
+            Console.WriteLine("Invalid Number");
+            return 0;
+        }
+        else
+        {
+            return (egg - 2) * 180;
+        }
     }
 }
