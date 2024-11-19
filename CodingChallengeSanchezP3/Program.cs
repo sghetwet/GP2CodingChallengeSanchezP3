@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Security.Cryptography.X509Certificates;
 
 
 
@@ -24,6 +25,7 @@ class Challenges
             Console.WriteLine("11: Determining if it is a true or false statement.");
             Console.WriteLine("12: Converting Hours to seconds.");
             Console.WriteLine("13 Returning the sum of internal angles of a polygon.");
+            Console.WriteLine("14: Adding 'edabit' to the end of a sentence.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -168,6 +170,13 @@ class Challenges
                 int eggint = int.Parse(egg);
                     Console.WriteLine("Your polygons internal angles equals: " + Angler(eggint) + " degrees.");
             }
+            else if (choiceint == 14)
+            {
+                Console.WriteLine("I will add the word 'Edabit' to a sentence you give me.");
+                Console.WriteLine("Give me a sentence please.");
+                var uhhuh = Console.ReadLine();
+                Console.WriteLine(uhhuh + " edabit.");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -256,5 +265,13 @@ class Challenges
         {
             return (egg - 2) * 180;
         }
+    }
+
+    public static void huh()
+    {
+        Console.WriteLine("I will add the word 'Edabit' to a sentence you give me.");
+        Console.WriteLine("Give me a sentence please.");
+        var uhhuh = Console.ReadLine();
+        Console.WriteLine(uhhuh + " edabit.");
     }
 }
