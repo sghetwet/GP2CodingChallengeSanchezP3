@@ -24,8 +24,9 @@ class Challenges
             Console.WriteLine("10: adding something to a sentence.");
             Console.WriteLine("11: Determining if it is a true or false statement.");
             Console.WriteLine("12: Converting Hours to seconds.");
-            Console.WriteLine("13 Returning the sum of internal angles of a polygon.");
+            Console.WriteLine("13: Returning the sum of internal angles of a polygon.");
             Console.WriteLine("14: Adding 'edabit' to the end of a sentence.");
+            Console.WriteLine("15: Checking if both values are true and marking them AS true, otherwise marking AS false.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -177,6 +178,17 @@ class Challenges
                 var uhhuh = Console.ReadLine();
                 Console.WriteLine(uhhuh + " edabit.");
             }
+            else if (choiceint == 15)
+            {
+                Console.WriteLine("Give me either true or false");
+                var a = Console.ReadLine();
+                bool abool = bool.Parse(a);
+                Console.WriteLine("Give me true or false again");
+                var b = Console.ReadLine();
+                bool bbool = bool.Parse(b);
+                Console.WriteLine("And (" + a + ", " + b + ") -> " + how(abool, bbool) + ".");
+                 
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -273,5 +285,19 @@ class Challenges
         Console.WriteLine("Give me a sentence please.");
         var uhhuh = Console.ReadLine();
         Console.WriteLine(uhhuh + " edabit.");
+    }
+
+    public static bool how(bool a, bool b)
+    {
+        if (a == true && b == true)
+        {
+            Console.WriteLine(" True ");
+            return true;
+        }
+        else
+        {
+            Console.WriteLine(" False ");
+            return false;
+        }
     }
 }
