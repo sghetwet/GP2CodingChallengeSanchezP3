@@ -27,6 +27,7 @@ class Challenges
             Console.WriteLine("13: Returning the sum of internal angles of a polygon.");
             Console.WriteLine("14: Adding 'edabit' to the end of a sentence.");
             Console.WriteLine("15: Checking if both values are true and marking them AS true, otherwise marking AS false.");
+            Console.WriteLine("16: Finding the score of a basketball game.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -189,6 +190,18 @@ class Challenges
                 Console.WriteLine("And (" + a + ", " + b + ") -> " + how(abool, bbool) + ".");
                  
             }
+            else if (choiceint == 16)
+            {
+                Console.WriteLine("We're going tro count the score of a basketball game based on the amount of 2 pointers and 3 pointers, give me the number of 2 point shots.");
+                var yuhhuh = Console.ReadLine();
+                int yuhhuhint = int.Parse(yuhhuh);
+                Console.WriteLine("Now give me the number of 3 point shots.");
+                var GREENBEAN = Console.ReadLine();
+                int GREENBEANint = int.Parse(GREENBEAN);
+                Console.WriteLine("Points (" + yuhhuh + ", " + GREENBEAN + ") -> " + Baller(GREENBEANint, yuhhuhint) + ".");
+                Baller(GREENBEANint, yuhhuhint);
+
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -299,5 +312,9 @@ class Challenges
             Console.WriteLine(" False ");
             return false;
         }
+    }
+    public static int Baller(int GREENBEAN, int yuhhuh)
+    {
+        return (yuhhuh * 2) + (GREENBEAN * 3);
     }
 }
