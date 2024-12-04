@@ -28,6 +28,7 @@ class Challenges
             Console.WriteLine("14: Adding 'edabit' to the end of a sentence.");
             Console.WriteLine("15: Checking if both values are true and marking them AS true, otherwise marking AS false.");
             Console.WriteLine("16: Finding the score of a basketball game.");
+            Console.WriteLine("17: Finding the perimeter of a rectangle.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -202,6 +203,17 @@ class Challenges
                 Baller(GREENBEANint, yuhhuhint);
 
             }
+            else if (choiceint == 17)
+            {
+                Console.WriteLine("Let's find the perimter of a reactangle! Give me the length of your rectangle.");
+                var Lbozo = Console.ReadLine();
+                int Lbozoint = int.Parse(Lbozo);
+                Console.WriteLine("Now give me the width of your rectangle.");
+                var Ratio = Console.ReadLine();
+                int Ratioint = int.Parse(Ratio);
+                Console.WriteLine(" Your length and width of (" + Lbozo + ", " + Ratio + ") equals a perimeter of " + perm(Lbozoint, Ratioint) + ".");
+                perm(Lbozoint, Ratioint);
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -316,5 +328,9 @@ class Challenges
     public static int Baller(int GREENBEAN, int yuhhuh)
     {
         return (yuhhuh * 2) + (GREENBEAN * 3);
+    }
+    public static int perm(int Lbozo, int Ratio)
+    {
+        return (Lbozo * 2) + (Ratio * 2);
     }
 }
