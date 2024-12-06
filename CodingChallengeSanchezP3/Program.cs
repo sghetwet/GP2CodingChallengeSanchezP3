@@ -29,6 +29,7 @@ class Challenges
             Console.WriteLine("15: Checking if both values are true and marking them AS true, otherwise marking AS false.");
             Console.WriteLine("16: Finding the score of a basketball game.");
             Console.WriteLine("17: Finding the perimeter of a rectangle.");
+            Console.WriteLine("18: Greeting someone with their name.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -214,6 +215,12 @@ class Challenges
                 Console.WriteLine(" Your length and width of (" + Lbozo + ", " + Ratio + ") equals a perimeter of " + perm(Lbozoint, Ratioint) + ".");
                 perm(Lbozoint, Ratioint);
             }
+            else if (choiceint == 18)
+            {
+                Console.WriteLine("Give me your name, so I can greet you.");
+                var name = Console.ReadLine();
+                Console.WriteLine("Hello " + name + "!");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -332,5 +339,11 @@ class Challenges
     public static int perm(int Lbozo, int Ratio)
     {
         return (Lbozo * 2) + (Ratio * 2);
+    }
+    public static void namepls()
+    {
+        Console.WriteLine("Give me your name, so I can greet you.");
+        var name = Console.ReadLine();
+        Console.WriteLine("Hello " + name + "!");
     }
 }
