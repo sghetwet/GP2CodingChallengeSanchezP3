@@ -30,6 +30,7 @@ class Challenges
             Console.WriteLine("16: Finding the score of a basketball game.");
             Console.WriteLine("17: Finding the perimeter of a rectangle.");
             Console.WriteLine("18: Greeting someone with their name.");
+            Console.WriteLine("19: Counting how many total legs there are between chickens, cows, and pigs.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -221,6 +222,20 @@ class Challenges
                 var name = Console.ReadLine();
                 Console.WriteLine("Hello " + name + "!");
             }
+            else if (choiceint == 19)
+            {
+                Console.WriteLine("Let's see the total amount of legs that there is between chickens, cows, and pigs. Give me the amount of pigs there is.");
+                var oink = Console.ReadLine();
+                int oinkint = int.Parse(oink);
+                Console.WriteLine("Now give me the amount of cows there will be.");
+                var MOO = Console.ReadLine();
+                int MOOint = int.Parse(MOO);
+                Console.WriteLine("Now give me the number of chickens there is.");
+                var wellwellwell = Console.ReadLine();
+                int wellwellwellint = int.Parse(wellwellwell);
+                Console.WriteLine("Animals(" + oink + ", " + MOO + ", " + wellwellwell + ") -> " + sigma(oinkint, MOOint, wellwellwellint) + ".");
+
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -345,5 +360,9 @@ class Challenges
         Console.WriteLine("Give me your name, so I can greet you.");
         var name = Console.ReadLine();
         Console.WriteLine("Hello " + name + "!");
+    }
+    public static int sigma(int oink, int MOO, int wellwellwell)
+    {
+        return (oink * 4) + (MOO * 4) + (wellwellwell *2);
     }
 }
