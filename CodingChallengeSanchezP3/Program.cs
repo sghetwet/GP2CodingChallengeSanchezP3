@@ -31,6 +31,7 @@ class Challenges
             Console.WriteLine("17: Finding the perimeter of a rectangle.");
             Console.WriteLine("18: Greeting someone with their name.");
             Console.WriteLine("19: Counting how many total legs there are between chickens, cows, and pigs.");
+            Console.WriteLine("20: Finding a football teams score based one wins, draws, and losses.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -163,7 +164,7 @@ class Challenges
             else if (choiceint == 12)
             {
                 Console.WriteLine("Thou shall give me a number for hours that I will convert to seconds.");
-                    var thosewhoknow = Console.ReadLine();
+                var thosewhoknow = Console.ReadLine();
                 int thosewhoknowint = int.Parse(thosewhoknow);
 
                 Console.WriteLine(thosewhoknow + " hours converted to seconds is: " + WinterArc(thosewhoknowint) + " seconds");
@@ -173,7 +174,7 @@ class Challenges
                 Console.WriteLine("Give me a polygon with any sides greater than 1 and I will return the sum of it's internal angles.");
                 var egg = Console.ReadLine();
                 int eggint = int.Parse(egg);
-                    Console.WriteLine("Your polygons internal angles equals: " + Angler(eggint) + " degrees.");
+                Console.WriteLine("Your polygons internal angles equals: " + Angler(eggint) + " degrees.");
             }
             else if (choiceint == 14)
             {
@@ -191,7 +192,7 @@ class Challenges
                 var b = Console.ReadLine();
                 bool bbool = bool.Parse(b);
                 Console.WriteLine("And (" + a + ", " + b + ") -> " + how(abool, bbool) + ".");
-                 
+
             }
             else if (choiceint == 16)
             {
@@ -235,6 +236,19 @@ class Challenges
                 int wellwellwellint = int.Parse(wellwellwell);
                 Console.WriteLine("Animals(" + oink + ", " + MOO + ", " + wellwellwell + ") -> " + sigma(oinkint, MOOint, wellwellwellint) + ".");
 
+            }
+            else if (choiceint == 20)
+            {
+                Console.WriteLine("Let's see the total score of a football team based on their wins, draws, and losses. Give me the total number of wins.");
+                var winnerwinner = Console.ReadLine();
+                int winnerwinnerint = int.Parse(winnerwinner);
+                Console.WriteLine("Now give me the number of draws.");
+                var drawing = Console.ReadLine();
+                int drawingint = int.Parse(drawing);
+                Console.WriteLine("Now give me the number of losses.");
+                var imaginelosing = Console.ReadLine();
+                int imaginelosingint = int.Parse(imaginelosing);
+                Console.WriteLine("Footbal points(" + winnerwinner + ", " + drawing + ", " + imaginelosing + ") -> " + rizzler(winnerwinnerint, drawingint, imaginelosingint) + ".");
             }
             else
             {
@@ -364,5 +378,10 @@ class Challenges
     public static int sigma(int oink, int MOO, int wellwellwell)
     {
         return (oink * 4) + (MOO * 4) + (wellwellwell *2);
+
+    }
+    public static int rizzler(int winnerwinner, int drawing, int imaginelosing)
+    {
+        return (winnerwinner * 3) + (drawing) + (imaginelosing * 0);
     }
 }
