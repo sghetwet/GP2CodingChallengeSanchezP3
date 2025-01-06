@@ -32,6 +32,7 @@ class Challenges
             Console.WriteLine("18: Greeting someone with their name.");
             Console.WriteLine("19: Counting how many total legs there are between chickens, cows, and pigs.");
             Console.WriteLine("20: Finding a football teams score based one wins, draws, and losses.");
+            Console.WriteLine("21: Fidning the month name based on its number.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -250,6 +251,11 @@ class Challenges
                 int imaginelosingint = int.Parse(imaginelosing);
                 Console.WriteLine("Footbal points(" + winnerwinner + ", " + drawing + ", " + imaginelosing + ") -> " + rizzler(winnerwinnerint, drawingint, imaginelosingint) + ".");
             }
+            
+            else if (choiceint == 21)
+            {
+                Console.WriteLine("Your month number results with, " + month(monthly) + ".");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -267,6 +273,7 @@ class Challenges
     {
         return number * 60;
     }
+
     public static int AddOne(int appendicitis)
     {
         return appendicitis += 1;
@@ -316,6 +323,7 @@ class Challenges
             return false;
         }
     }
+
     public static void Gimmie()
     {
         Console.WriteLine("I will add something to the sentence you give me, so give me a sentence");
@@ -327,6 +335,7 @@ class Challenges
     {
         return thosewhoknow * 3600;
     }
+
     public static int Angler(int egg)
     {
         if (egg < 2)
@@ -361,27 +370,92 @@ class Challenges
             return false;
         }
     }
+
     public static int Baller(int GREENBEAN, int yuhhuh)
     {
         return (yuhhuh * 2) + (GREENBEAN * 3);
     }
+
     public static int perm(int Lbozo, int Ratio)
     {
         return (Lbozo * 2) + (Ratio * 2);
     }
+
     public static void namepls()
     {
         Console.WriteLine("Give me your name, so I can greet you.");
         var name = Console.ReadLine();
         Console.WriteLine("Hello " + name + "!");
     }
+
     public static int sigma(int oink, int MOO, int wellwellwell)
     {
         return (oink * 4) + (MOO * 4) + (wellwellwell *2);
 
     }
+
     public static int rizzler(int winnerwinner, int drawing, int imaginelosing)
     {
         return (winnerwinner * 3) + (drawing) + (imaginelosing * 0);
+    }
+
+    public static int month(int monthly)
+    {
+        Console.WriteLine("You will pick a month between the numbers 1-12. Please give me a number between 1-12.");
+        var monthly = Console.ReadLine();
+        int monthlyint = int.Parse(monthly);
+
+        if (monthlyint == 1)
+        {
+            Console.WriteLine("MonthName(1) -> January");
+        }
+        else if (monthlyint == 2)
+        {
+            Console.WriteLine("MonthName(2) -> February");
+        }
+        else if (monthlyint == 3)
+        {
+            Console.WriteLine("MonthName(3) -> March");
+        }
+        else if (monthlyint == 4)
+        {
+            Console.WriteLine("MonthName(4) -> April");
+        }
+        else if (monthlyint == 5)
+        {
+            Console.WriteLine("MonthName(5) -> May");
+        }
+        else if (monthlyint == 6)
+        {
+            Console.WriteLine("MonthName(6) -> June");
+        }
+        else if (monthlyint == 7)
+        {
+            Console.WriteLine("MonthName(7) -> July");
+        }
+        else if (monthlyint == 8)
+        {
+            Console.WriteLine("MonthName(8) -> August");
+        }
+        else if (monthlyint == 9)
+        {
+            Console.WriteLine("MonthName(9) -> September");
+        }
+        else if (monthlyint == 10)
+        {
+            Console.WriteLine("MonthName(10) -> October");
+        }
+        else if (monthlyint == 11)
+        {
+            Console.WriteLine("MonthName(11) -> November");
+        }
+        else if (monthlyint == 12)
+        {
+            Console.WriteLine("MonthName(12) -> December");
+        }
+        else
+        {
+            Console.WriteLine("This doesn't corospond to a month and you know it >:(");
+        }
     }
 }
