@@ -254,7 +254,63 @@ class Challenges
             
             else if (choiceint == 21)
             {
-                Console.WriteLine("Your month number results with, " + month(monthly) + ".");
+                Console.WriteLine("You will pick a month between the numbers 1-12. Please give me a number between 1-12.");
+                var months = Console.ReadLine();
+                int monthsint = int.Parse(months);
+
+                if (monthsint == 1)
+                {
+                    Console.WriteLine("MonthName(1) -> January");
+                }
+                else if (monthsint == 2)
+                {
+                    Console.WriteLine("MonthName(2) -> February");
+                }
+                else if (monthsint == 3)
+                {
+                   Console.WriteLine("MonthName(3) -> March");
+                }
+                else if (monthsint == 4)
+                {
+                   Console.WriteLine("MonthName(4) -> April");
+                }
+                else if (monthsint == 5)
+                {
+                    Console.WriteLine("MonthName(5) -> May");
+                }
+                else if (monthsint == 6)
+                {
+                    Console.WriteLine("MonthName(6) -> June");
+                }
+                else if (monthsint == 7)
+                {
+                    Console.WriteLine("MonthName(7) -> July");
+                }
+                else if (monthsint == 8)
+                {
+                    Console.WriteLine("MonthName(8) -> August");
+                }
+                else if (monthsint == 9)
+                {
+                    Console.WriteLine("MonthName(9) -> September");
+                }
+                else if (monthsint == 10)
+                {
+                    Console.WriteLine("MonthName(10) -> October");
+                }
+                else if (monthsint == 11)
+                {
+                    Console.WriteLine("MonthName(11) -> November");
+                }
+                else if (monthsint == 12)
+                {
+                    Console.WriteLine("MonthName(12) -> December");
+                }
+                else
+                {
+                    Console.WriteLine("This doesn't corospond to a month and you know it >:(");
+                }
+
             }
             else
             {
@@ -399,63 +455,4 @@ class Challenges
         return (winnerwinner * 3) + (drawing) + (imaginelosing * 0);
     }
 
-    public static int month(int monthly)
-    {
-        Console.WriteLine("You will pick a month between the numbers 1-12. Please give me a number between 1-12.");
-        var monthly = Console.ReadLine();
-        int monthlyint = int.Parse(monthly);
-
-        if (monthlyint == 1)
-        {
-            Console.WriteLine("MonthName(1) -> January");
-        }
-        else if (monthlyint == 2)
-        {
-            Console.WriteLine("MonthName(2) -> February");
-        }
-        else if (monthlyint == 3)
-        {
-            Console.WriteLine("MonthName(3) -> March");
-        }
-        else if (monthlyint == 4)
-        {
-            Console.WriteLine("MonthName(4) -> April");
-        }
-        else if (monthlyint == 5)
-        {
-            Console.WriteLine("MonthName(5) -> May");
-        }
-        else if (monthlyint == 6)
-        {
-            Console.WriteLine("MonthName(6) -> June");
-        }
-        else if (monthlyint == 7)
-        {
-            Console.WriteLine("MonthName(7) -> July");
-        }
-        else if (monthlyint == 8)
-        {
-            Console.WriteLine("MonthName(8) -> August");
-        }
-        else if (monthlyint == 9)
-        {
-            Console.WriteLine("MonthName(9) -> September");
-        }
-        else if (monthlyint == 10)
-        {
-            Console.WriteLine("MonthName(10) -> October");
-        }
-        else if (monthlyint == 11)
-        {
-            Console.WriteLine("MonthName(11) -> November");
-        }
-        else if (monthlyint == 12)
-        {
-            Console.WriteLine("MonthName(12) -> December");
-        }
-        else
-        {
-            Console.WriteLine("This doesn't corospond to a month and you know it >:(");
-        }
-    }
 }
