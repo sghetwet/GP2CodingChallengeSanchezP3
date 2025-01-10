@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
 
 
@@ -33,6 +34,8 @@ class Challenges
             Console.WriteLine("19: Counting how many total legs there are between chickens, cows, and pigs.");
             Console.WriteLine("20: Finding a football teams score based one wins, draws, and losses.");
             Console.WriteLine("21: Fidning the month name based on its number.");
+            Console.WriteLine("22:");
+            Console.WriteLine("23: Finding the sum of the absolute value to integers.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -312,6 +315,29 @@ class Challenges
                 }
 
             }
+            else if (choiceint == 22)
+            {
+
+            }
+            else if (choiceint == 23)
+            {
+                Console.WriteLine("We will be adding the sum of the absolute values you give me, please give me one of five numbers.");
+                var num1 = Console.ReadLine();
+                int num1int = int.Parse(num1);
+                Console.WriteLine("And the next one.");
+                var num2 = Console.ReadLine();
+                int num2int = int.Parse(num2);
+                Console.WriteLine("And the next one.");
+                var num3 = Console.ReadLine();
+                int num3int = int.Parse(num3);
+                Console.WriteLine("And the next one.");
+                var num4 = Console.ReadLine();
+                int num4int = int.Parse(num4);
+                Console.WriteLine("And the next one.");
+                var num5 = Console.ReadLine();
+                int num5int = int.Parse(num5);
+                Console.WriteLine("getAbsSum ([" + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ", " + num5 + "]) --> " + AbsoluteRadiance(num1int, num2int, num3int, num4int, num5int) + ".");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -455,4 +481,9 @@ class Challenges
         return (winnerwinner * 3) + (drawing) + (imaginelosing * 0);
     }
 
+    public static int AbsoluteRadiance(int num1, int num2, int num3, int num4, int num5)
+    {
+        return ((Math.Abs(num1)) + (Math.Abs(num2)) + (Math.Abs(num3)) + (Math.Abs(num4)) + (Math.Abs(num5)));
+        
+    }
 }
