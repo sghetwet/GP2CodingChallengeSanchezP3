@@ -36,10 +36,11 @@ class Challenges
             Console.WriteLine("21: Fidning the month name based on its number.");
             Console.WriteLine("22:");
             Console.WriteLine("23: Finding the sum of the absolute value to integers.");
+            Console.WriteLine("24: Finding a number to the power of another number.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
-            int choiceint = int.Parse(choice);
+           int choiceint = int.Parse(choice);
             if (choiceint == 0)
             {
                 run = false;
@@ -254,7 +255,7 @@ class Challenges
                 int imaginelosingint = int.Parse(imaginelosing);
                 Console.WriteLine("Footbal points(" + winnerwinner + ", " + drawing + ", " + imaginelosing + ") -> " + rizzler(winnerwinnerint, drawingint, imaginelosingint) + ".");
             }
-            
+
             else if (choiceint == 21)
             {
                 Console.WriteLine("You will pick a month between the numbers 1-12. Please give me a number between 1-12.");
@@ -271,11 +272,11 @@ class Challenges
                 }
                 else if (monthsint == 3)
                 {
-                   Console.WriteLine("MonthName(3) -> March");
+                    Console.WriteLine("MonthName(3) -> March");
                 }
                 else if (monthsint == 4)
                 {
-                   Console.WriteLine("MonthName(4) -> April");
+                    Console.WriteLine("MonthName(4) -> April");
                 }
                 else if (monthsint == 5)
                 {
@@ -337,6 +338,16 @@ class Challenges
                 var num5 = Console.ReadLine();
                 int num5int = int.Parse(num5);
                 Console.WriteLine("getAbsSum ([" + num1 + ", " + num2 + ", " + num3 + ", " + num4 + ", " + num5 + "]) --> " + AbsoluteRadiance(num1int, num2int, num3int, num4int, num5int) + ".");
+            }
+            else if (choiceint == 24)
+            {
+                Console.WriteLine("Let's try getting the power of an inputted number. Give me the base.");
+                var POWER1 = Console.ReadLine();
+                int POWER1int = int.Parse(POWER1);
+                Console.WriteLine("Now give me the exponent.");
+                var POWER2 = Console.ReadLine();
+                int POWER2int = int.Parse(POWER2);
+                Console.WriteLine("CalculateExponents(" + POWER1 + ", " + POWER2 + ") -> " + POWER(POWER1int, POWER2int) + ".");
             }
             else
             {
@@ -485,5 +496,10 @@ class Challenges
     {
         return ((Math.Abs(num1)) + (Math.Abs(num2)) + (Math.Abs(num3)) + (Math.Abs(num4)) + (Math.Abs(num5)));
         
+    }
+
+    public static double POWER(double POWER1, double POWER2)
+    {
+        return (Math.Pow(POWER1, POWER2));
     }
 }
