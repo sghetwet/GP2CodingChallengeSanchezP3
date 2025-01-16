@@ -37,10 +37,11 @@ class Challenges
             Console.WriteLine("22:");
             Console.WriteLine("23: Finding the sum of the absolute value to integers.");
             Console.WriteLine("24: Finding a number to the power of another number.");
+            Console.WriteLine("25: Multiplying any given amount of numbers by the total amount of numbers given.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
-           int choiceint = int.Parse(choice);
+            int choiceint = int.Parse(choice);
             if (choiceint == 0)
             {
                 run = false;
@@ -349,6 +350,14 @@ class Challenges
                 int POWER2int = int.Parse(POWER2);
                 Console.WriteLine("CalculateExponents(" + POWER1 + ", " + POWER2 + ") -> " + POWER(POWER1int, POWER2int) + ".");
             }
+            else if (choiceint == 25)
+            {
+                Console.WriteLine("Enter any amount of numbers in an array and I will multiply them by the total amount of numbers in the array.");
+                string input = Console.ReadLine();
+                int[] arr = input.Split(' ').Select(int.Parse).ToArray();
+                int[] result = MultiplyByLength(arr);
+                Console.WriteLine("MultiplyByLengt: [" + string.Join(", ", result) + "]");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -483,7 +492,7 @@ class Challenges
 
     public static int sigma(int oink, int MOO, int wellwellwell)
     {
-        return (oink * 4) + (MOO * 4) + (wellwellwell *2);
+        return (oink * 4) + (MOO * 4) + (wellwellwell * 2);
 
     }
 
@@ -495,11 +504,16 @@ class Challenges
     public static int AbsoluteRadiance(int num1, int num2, int num3, int num4, int num5)
     {
         return ((Math.Abs(num1)) + (Math.Abs(num2)) + (Math.Abs(num3)) + (Math.Abs(num4)) + (Math.Abs(num5)));
-        
+
     }
 
     public static double POWER(double POWER1, double POWER2)
     {
         return (Math.Pow(POWER1, POWER2));
+    }
+    public static int[] MultiplyByLength(int[] arr)
+    {
+        int length = arr.Length; int[] result = new int[length]; for (int i = 0; i < length; i++) { result[i] = arr[i] * length; }    
+        return result;
     }
 }
