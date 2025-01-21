@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Security.Cryptography.X509Certificates;
+using Microsoft.VisualBasic;
 
 
 
@@ -358,9 +359,18 @@ class Challenges
                 int[] result = MultiplyByLength(arr);
                 Console.WriteLine("MultiplyByLengt: [" + string.Join(", ", result) + "]");
             }
+            else if (choiceint == 26)
+            {
+                Console.WriteLine("I will find the hamming distance of 2 strings, give me a string");
+                var firstStrand = Console.ReadLine();
+                Console.WriteLine("Now the next.");
+                var SecondStrand = Console.ReadLine();
+                Console.WriteLine("HammingDistance(" + firstStrand + ", " + SecondStrand + ") -> " + Distance(firstStrand, SecondStrand) + ".");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
+
             }
 
         }
@@ -515,5 +525,11 @@ class Challenges
     {
         int length = arr.Length; int[] result = new int[length]; for (int i = 0; i < length; i++) { result[i] = arr[i] * length; }    
         return result;
+    }
+    public static int Distance(string firstStrand, string secondStrand)
+    {
+        if (firstStrand.Length != secondStrand.Length) { throw new ArgumentException(); }
+
+        return firstStrand.Zip(secondStrand, (abcde, bcdef) => abcde != bcdef).Count(f => f);
     }
 }
