@@ -39,6 +39,8 @@ class Challenges
             Console.WriteLine("23: Finding the sum of the absolute value to integers.");
             Console.WriteLine("24: Finding a number to the power of another number.");
             Console.WriteLine("25: Multiplying any given amount of numbers by the total amount of numbers given.");
+            Console.WriteLine("26: Hamming Distance.");
+            Console.WriteLine("27: Swapping your first and last name.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -366,6 +368,14 @@ class Challenges
                 Console.WriteLine("Now the next.");
                 var SecondStrand = Console.ReadLine();
                 Console.WriteLine("HammingDistance(" + firstStrand + ", " + SecondStrand + ") -> " + Distance(firstStrand, SecondStrand) + ".");
+            }
+            else if (choiceint == 27)
+            {
+                Console.WriteLine("Let's get your first name and last name and swap them, give me your first name.");
+                var firstname = Console.ReadLine();
+                Console.WriteLine("Now give me your last name.");
+                var lastname = Console.ReadLine();
+                Console.WriteLine("NameShuffle( ''" + firstname + " " + lastname + "'') -> " + lastname + " " + firstname + ".");
             }
             else
             {
