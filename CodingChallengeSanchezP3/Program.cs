@@ -41,6 +41,7 @@ class Challenges
             Console.WriteLine("25: Multiplying any given amount of numbers by the total amount of numbers given.");
             Console.WriteLine("26: Hamming Distance.");
             Console.WriteLine("27: Swapping your first and last name.");
+            Console.WriteLine("28: Returning the smaller #");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -51,6 +52,7 @@ class Challenges
             }
             else if (choiceint == 1)
             {
+                
                 Console.WriteLine("Today we are going to use the number added called SUM. Please input two numbers for us to add. \n");
 
                 var number1 = Console.ReadLine();
@@ -377,6 +379,16 @@ class Challenges
                 var lastname = Console.ReadLine();
                 Console.WriteLine("NameShuffle( ''" + firstname + " " + lastname + "'') -> " + lastname + " " + firstname + ".");
             }
+            else if (choiceint == 28)
+            {
+                Console.WriteLine("Let's see which of two numbers is smaller, give me a number");
+                var numfirst = Console.ReadLine();
+                int numfirstint = int.Parse(numfirst);
+                Console.WriteLine("Now the second number.");
+                var numsecond = Console.ReadLine();
+                int numsecondint = int.Parse(numsecond);
+                Console.WriteLine(" (" + numfirst + ", " + numsecond + ") -> " + sizedontmatter(numfirstint, numsecondint) + ".");
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -541,5 +553,16 @@ class Challenges
         if (firstStrand.Length != secondStrand.Length) { throw new ArgumentException(); }
 
         return firstStrand.Zip(secondStrand, (abcde, bcdef) => abcde != bcdef).Count(f => f);
+    }
+    public static int sizedontmatter(int numfirst, int numsecond)
+    {
+        if (numfirst < numsecond)
+        {
+            return numfirst;
+        }
+        else
+        {
+            return numsecond;
+        }
     }
 }
