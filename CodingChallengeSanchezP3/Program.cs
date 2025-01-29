@@ -42,6 +42,7 @@ class Challenges
             Console.WriteLine("26: Hamming Distance.");
             Console.WriteLine("27: Swapping your first and last name.");
             Console.WriteLine("28: Returning the smaller #");
+            Console.WriteLine("29: Doing factorials.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -389,6 +390,14 @@ class Challenges
                 int numsecondint = int.Parse(numsecond);
                 Console.WriteLine(" (" + numfirst + ", " + numsecond + ") -> " + sizedontmatter(numfirstint, numsecondint) + ".");
             }
+            else if (choiceint == 29)
+            {
+                Console.WriteLine("We will be doing the factorial to a number you give me, give me a number.");
+                    var userinput = Console.ReadLine();
+                int userinputint = int.Parse(userinput);
+                Console.WriteLine("Factorial (" + userinput + ") -> " + factor(userinputint) + ".");
+
+            }
             else
             {
                 Console.WriteLine("Invaled number, please type an avaible number");
@@ -564,5 +573,12 @@ class Challenges
         {
             return numsecond;
         }
+    }
+    public static int factor(int userinput)
+    {
+        int res = 1;
+        for (int i = 2; i <= userinput; i++)
+            res *= i;
+        return res;
     }
 }
