@@ -43,6 +43,7 @@ class Challenges
             Console.WriteLine("27: Swapping your first and last name.");
             Console.WriteLine("28: Returning the smaller #");
             Console.WriteLine("29: Doing factorials.");
+            Console.WriteLine("Counting vowels in a word.");
             Console.WriteLine("0: exit program");
 
             var choice = Console.ReadLine();
@@ -53,7 +54,7 @@ class Challenges
             }
             else if (choiceint == 1)
             {
-                
+
                 Console.WriteLine("Today we are going to use the number added called SUM. Please input two numbers for us to add. \n");
 
                 var number1 = Console.ReadLine();
@@ -393,10 +394,25 @@ class Challenges
             else if (choiceint == 29)
             {
                 Console.WriteLine("We will be doing the factorial to a number you give me, give me a number.");
-                    var userinput = Console.ReadLine();
+                var userinput = Console.ReadLine();
                 int userinputint = int.Parse(userinput);
                 Console.WriteLine("Factorial (" + userinput + ") -> " + factor(userinputint) + ".");
 
+            }
+            else if (choiceint == 30)
+            {
+                Console.WriteLine("Let's count the total vowels in a word, give me a word.");
+                string input = Console.ReadLine();
+
+                if (string.IsNullOrEmpty(input))
+                {
+                    Console.WriteLine("Invalid input :(");
+
+                }
+                else
+                {
+                    Console.WriteLine("CountVowels(" + input + ") -> " + sad(input));
+                }
             }
             else
             {
@@ -554,7 +570,7 @@ class Challenges
     }
     public static int[] MultiplyByLength(int[] arr)
     {
-        int length = arr.Length; int[] result = new int[length]; for (int i = 0; i < length; i++) { result[i] = arr[i] * length; }    
+        int length = arr.Length; int[] result = new int[length]; for (int i = 0; i < length; i++) { result[i] = arr[i] * length; }
         return result;
     }
     public static int Distance(string firstStrand, string secondStrand)
@@ -580,5 +596,19 @@ class Challenges
         for (int i = 2; i <= userinput; i++)
             res *= i;
         return res;
+    }
+    public static int sad(string vow)
+    {
+        int count = 0;
+        string vowels = "aeiou";
+
+        foreach (char c in vow)
+        {
+            if (vowels.Contains(c))
+            {
+                count++;
+            }
+        }
+        return count;
     }
 }
